@@ -1,4 +1,4 @@
-#include <stdio.>
+#include <stdio.h>
 /**
  * main - prints the alphabet in lowercase,
  * followed by a new line
@@ -11,5 +11,5 @@ int main(void)
 	for( alphabet = 'a' ; alphabet <= 'z'; alphabet++)
 		putchar(alphabet);
 	putchar("\n");
-	retun(0);
+	return(0);
 }
