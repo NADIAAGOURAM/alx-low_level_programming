@@ -9,11 +9,10 @@ void more_numbers(void)
 {
 	char n, c;
 	int i;
-	n = '0';
-
 
 	for (i = 0; i < 10; i++)
 	{
+		n = 0;
 		while (n <= 14)
 		{
 			c = n;
@@ -22,12 +21,9 @@ void more_numbers(void)
 				_putchar('1');
 				c = n % 10;
 			}
-
 			_putchar('0' + c);
 			n++;
 		}
-
 		_putchar('\n');
 	}
-
 }
