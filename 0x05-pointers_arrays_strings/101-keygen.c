@@ -19,7 +19,7 @@ int main(void)
 	{
 		ch = rand() % 120;
 		sum += ch;
-		putchar(c);
+		putchar(ch);
 	}
 	putchar(2772 - sum);
 	return (0);
