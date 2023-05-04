@@ -5,7 +5,7 @@
  * @dest:string
  * @src:string
  *
- * Return : string dest
+ * Return : char dest
  */
 
 char *_strcat(char *dest, char *src)
