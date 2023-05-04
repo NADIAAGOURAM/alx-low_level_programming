@@ -9,6 +9,7 @@
 char *cap_string(char *c)
 {
 	int i = 0;
+	int j;
 	char sep[] = ",\t;\n; .!?\"(){}";
 
 	while (c[i])
@@ -17,7 +18,7 @@ char *cap_string(char *c)
 			i++;
 		for (j = 0; sep[j] != '\0'; j++)
 		{
-			if (c[i] == sep[j])
+			if (c[i - 1] == sep[j])
 				c[i] = c[i] - 32;
 		}
 	}
