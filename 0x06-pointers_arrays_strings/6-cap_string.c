@@ -9,7 +9,6 @@
 char *cap_string(char *c)
 {
 	int i = 0;
-	int j;
 
 	while (c[i])
 	{
