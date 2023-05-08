@@ -5,7 +5,7 @@
  * @dest:char
  * @src:char
  * @n:unsigned int bytes
- * Return : dest
+ * Return: dest char
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
