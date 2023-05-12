@@ -16,7 +16,6 @@ int main(int argc, char *argv[])
 	int i, sum;
 
 	sum = 0;
-	
 	while (argc-- && argc > 0)
 	{
 		for (i = 0; argv[argc][i] != '\0'; i++)
