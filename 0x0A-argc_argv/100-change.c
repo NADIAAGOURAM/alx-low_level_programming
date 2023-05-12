@@ -13,6 +13,13 @@
 int main(int argc, char *argv[])
 {
 	int i,res;
+	
+	res = 0;
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
 	printf("%d\n", res);
 	return (0);
 }
