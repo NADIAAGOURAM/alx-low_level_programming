@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+#include <string.h>
+#include <ctype.h>
 
 /**
  * main - prints the minimum number of coins to
@@ -12,7 +13,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i,res;
+	int i, res;
 	
 	res = 0;
 	if (argc != 2)
