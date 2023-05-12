@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 	
 	if (argc == 3)
 	{
-		mul = atoi(argv[1]) * atoi(argv[2]);
+		mul = _atoi(argv[1]) * _atoi(argv[2]);
 		printf("%d\n", mul);
 	}
 	else
