@@ -29,7 +29,7 @@ int _strlen(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	char *concat;
-	int len1; len2;
+	int len1, len2;
 
 	if (!s1)
 		s1 = "";
