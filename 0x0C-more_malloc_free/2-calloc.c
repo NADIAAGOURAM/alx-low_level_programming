@@ -29,7 +29,7 @@ char *_memset(char *s, char b, unsigned int n)
  * Return:pointer
  */
 
-void *_calloc(unsigned int nmemb, unsigned int size);
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
 
