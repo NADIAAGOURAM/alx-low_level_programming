@@ -10,8 +10,6 @@
  * Return: void
  */
 
-typedef long unsigned int size_t;
-
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	long unsigned int i;
