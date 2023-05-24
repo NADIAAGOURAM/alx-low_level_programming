@@ -10,13 +10,15 @@
  * Return: void
  */
 
+typedef long unsigned int size_t;
+
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	typedef int size_t;
-	int i;
+	long unsigned int i;
 
 	if (array && action)
 	{
 		for (i = 0 ; i < size ; i++)
-			action((*array)[i]);	
+			action(array[i]);	
 	}
+}
