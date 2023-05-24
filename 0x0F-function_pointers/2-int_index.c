@@ -4,8 +4,8 @@
 /**
  * int_index - searches for an integer.
  * @array: array
- * @size: the size of the array
- * @cmpa: pointer to the function
+ * @size:the size of the array
+ * @cmp:pointer to the function
  * Return:index of the first element or -1
  */
 
@@ -17,7 +17,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 	{
 		for (i = 0 ; i < size ; i++)
 		{
-			if ((*cmp)array[i] != 0)	
+			if ((*cmp)array[i] != 0)
 				return (i);
 		}
 	else
