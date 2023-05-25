@@ -16,7 +16,7 @@ int sum_them_all(const unsigned int n, ...)
 	va_list nptr;
 	va_start(nptr, n);
 	for (i = 0; i < n; i++)
-		sum += sum + va_arg(nptr, int);
+		sum += sum + va_arg(nptr, unsigned int);
 	va_end(nptr);
 	return (sum);
 }
