@@ -1,14 +1,19 @@
 #include "main.h"
 
 #define BUFFER_SIZE 1024
-
+/**
+ * main - copies the content of a file to another file.
+ * @argc: number of arguments.
+ * @argv: arguments vector.
+ * Return: Always 0.
+ */
 int main(int argc, char *argv[])
 {
 	char *file_from, *file_to;
-	int fd_from,fd_to;
+	int fd_from, fd_to;
 	char buffer[BUFFER_SIZE];
 	ssize_t nbr, nbw;
-	
+
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
@@ -24,19 +29,18 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-
 	while ((nbr = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
 		nbw = write(fd_to, buffer, nbr);
 		if (nbw == -1)
 		{
-		       	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
 	}
