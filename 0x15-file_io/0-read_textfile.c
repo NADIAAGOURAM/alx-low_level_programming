@@ -21,9 +21,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(char) * (letters));
 	if (!buffer)
 		return (0);
-	while ((nbr = read(file, buffer, letters)) > 0)
-		nbw = write(STDOUT_FILENO, buffer, nbr);
-	if (nbr == -1 || nbw == -1 || nbr != nbw)
+	nbr = read(file, buffer, letters);
+	if (nbr == -1)
+	{
+		free(buffer);
+		close(file);
+		return (0);
+	}
+	nbw = write(STDOUT_FILENO, buffer, nbr);
+	if (nbw == -1 || nbr != nbw)
 		return (0);
 	close(file);
 	free(buffer);
