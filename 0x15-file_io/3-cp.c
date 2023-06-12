@@ -18,8 +18,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
 		exit(97);
 	}
-	*file_from = argv[1];
-	*file_to = argv[2];
 
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
